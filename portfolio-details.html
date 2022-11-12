@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - BizLand Bootstrap Template</title>
+  <title>Products Details - Vietbestech Group</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -36,6 +36,21 @@
 </head>
 
 <body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+
+  var parts = window.location.search.substr(1).split("&");
+var $_GET = {};
+for (var i = 0; i < parts.length; i++) {
+    var temp = parts[i].split("=");
+    $_GET[decodeURIComponent(temp[0])] = decodeURIComponent(temp[1]);
+}
+
+
+
+
+</script>
+
 
   <!-- ======= Top Bar ======= -->
   <section id="topbar" class="d-flex align-items-center">
@@ -63,29 +78,13 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto " href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto active" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto " href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+          <li><a class="nav-link scrollto active" href="index.html#portfolio">Products</a></li>
+          <li><a class="nav-link scrollto" href="index.html#team">Team</a></li>
+    
+          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -122,15 +121,15 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-1.jpg" alt="">
+                  <img id="image1" src="assets/img/portfolio/portfolio-details-1.jpg" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-2.jpg" alt="">
+                  <img id="image2" src="assets/img/portfolio/portfolio-details-2.jpg" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="">
+                  <img  id="image3" src="assets/img/portfolio/portfolio-details-3.jpg" alt="">
                 </div>
 
               </div>
@@ -140,18 +139,11 @@
 
           <div class="col-lg-4">
             <div class="portfolio-info">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
-              </ul>
-            </div>
+              <h3>Product information</h3>
+          
             <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
-              <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+              <h2 id="producth2"></h2>
+              <p id="productp">
               </p>
             </div>
           </div>
@@ -249,7 +241,80 @@
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<script>
+ 
 
+  if($_GET['id']=='1')
+  {
+  document.getElementById("image1").src = "assets/img/portfolio/electric/concreate electirc pole/1.jpg"
+  document.getElementById("image2").src = "assets/img/portfolio/electric/concreate electirc pole/2.jpg"
+  document.getElementById("image3").src = "assets/img/portfolio/electric/concreate electirc pole/3.jpg"
+  document.getElementById("producth2").innerHTML = "Concrete Electric Pole";// 2
+  }
+  if($_GET['id']=='2')
+  {
+  document.getElementById("image1").src = "assets/img/portfolio/Technology/walkie talkie 4G + Headset/1.jpg"
+  document.getElementById("image2").src = "assets/img/portfolio/Technology/walkie talkie 4G + Headset/2.jpg"
+  document.getElementById("image3").src = "assets/img/portfolio/Technology/walkie talkie 4G + Headset/3.jpg"
+  document.getElementById("producth2").innerHTML = "Walkie Talkie 4G + Headset";// 2
+  }
+  if($_GET['id']=='3')
+  {
+  document.getElementById("image1").src = "assets/img/portfolio/electric/Electric Cable/1.jpg"
+  document.getElementById("image2").src = "assets/img/portfolio/electric/Electric Cable/2.jpg"
+  document.getElementById("image3").src = "assets/img/portfolio/electric/Electric Cable/3.jpg"
+  document.getElementById("producth2").innerHTML = "Electric Cable";// 2
+  }
+  if($_GET['id']=='4')
+  {
+  document.getElementById("image1").src = "assets/img/portfolio/Telecommunication/Fiber optic Closure/1.jpg"
+  document.getElementById("image2").src = "assets/img/portfolio/Telecommunication/Fiber optic Closure/2.jpg"
+  document.getElementById("image3").src = "assets/img/portfolio/Telecommunication/Fiber optic Closure/3.jpg"
+  document.getElementById("producth2").innerHTML = "Fiber optic Closure";// 2
+  }
+  if($_GET['id']=='5')
+  {
+  document.getElementById("image1").src = "assets/img/portfolio/Technology/Night vision goggles/1.jpg"
+  document.getElementById("image2").src = "assets/img/portfolio/Technology/Night vision goggles/2.jpg"
+  document.getElementById("image3").src = "assets/img/portfolio/Technology/Night vision goggles/3.jpg"
+  document.getElementById("producth2").innerHTML = "Night Vision Goggles";// 2
+  }
+  if($_GET['id']=='6')
+  {
+  document.getElementById("image1").src = "assets/img/portfolio/Battery/battery/1.jpg"
+  document.getElementById("image2").src = "assets/img/portfolio/Battery/battery/2.jpg"
+  document.getElementById("image3").src = "assets/img/portfolio/Battery/battery/3.jpg"
+  document.getElementById("producth2").innerHTML = "Battery";// 2
+  }
+  if($_GET['id']=='7')
+  {
+  document.getElementById("image1").src = "assets/img/portfolio/electric/Transformer/1.jpg"
+  document.getElementById("image2").src = "assets/img/portfolio/electric/Transformer/2.jpg"
+  document.getElementById("image3").src = "assets/img/portfolio/electric/Transformer/3.jpg"
+  document.getElementById("producth2").innerHTML = "Transformer";// 2
+  }
+  if($_GET['id']=='8')
+  {
+  document.getElementById("image1").src = "assets/img/portfolio/Telecommunication/Optical cable/1.jpg"
+  document.getElementById("image2").src = "assets/img/portfolio/Telecommunication/Optical cable/2.jpg"
+  document.getElementById("image3").src = "assets/img/portfolio/Telecommunication/Optical cable/3.jpg"
+  document.getElementById("producth2").innerHTML = "Optical cable";// 2
+  }
+  if($_GET['id']=='9')
+  {
+  document.getElementById("image1").src = "assets/img/portfolio/portfolio-8.jpg"
+  document.getElementById("image2").src = "assets/img/portfolio/portfolio-8.jpg"
+  document.getElementById("image3").src = "assets/img/portfolio/portfolio-8.jpg"
+  document.getElementById("producth2").innerHTML = "Agriculture";// 2
+  }
+  if($_GET['id']=='10')
+  {
+  document.getElementById("image1").src = "assets/img/portfolio/Sola Panel/Solar Panel/1.jpg"
+  document.getElementById("image2").src = "assets/img/portfolio/Sola Panel/Solar Panel/2.jpg"
+  document.getElementById("image3").src = "assets/img/portfolio/Sola Panel/Solar Panel/3.jpg"
+  document.getElementById("producth2").innerHTML = "Solar Panel";// 2
+  }
+</script>
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
