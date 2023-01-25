@@ -1827,3 +1827,17 @@ section {
     padding: 2px 0;
   }
 }
+
+.alert-cookie-policy{
+  display: none;
+  border-radius: 0;
+  position: fixed;
+  bottom:0;
+  top:auto;
+  left:0;
+  right: 0;
+  z-index: 999;
+}
+.alert-cookie-policy .alert{
+  border-radius: 0;
+}
